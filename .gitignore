@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/public/images/uzbekistan/Counter-Strike_1.6_rus.exe
 /.pnp
 .pnp.js
 

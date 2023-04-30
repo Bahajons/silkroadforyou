@@ -1,0 +1,130 @@
+{
+	"home": "Home O'zbekcha",
+	"packages": {
+		"0": {
+			"country": "Uzbekistan",
+			"name": "Tashkent - Samarkand - Bukhara - Khiva - Nukus",
+			"price": "200",
+			"day": "9",
+			"night": "10",
+			"slug": "tashkent-samarkand-bukhara-khiva",
+			"photo_short": "images/resource/image-1.jpg",
+			"photo_full": "images/background/b-image-7.jpg",
+			"tour_detail": "Uzbekistan is a landlocked country located in Central Asia, bordered by Kazakhstan to the north, Kyrgyzstan to the northeast, Tajikistan to the southeast, Afghanistan to the south, and Turkmenistan to the southwest. The country has a rich history and culture, with many ancient cities and monuments that date back to the time of the Silk Road. /n One of the most popular cities to visit in Uzbekistan is Samarkand, which is home to some of the most stunning examples of Islamic architecture in the world. The Registan is a large public square that features three madrasas (Islamic schools) that date back to the 15th and 17th centuries. Other notable sights in Samarkand include the Gur-e-Amir mausoleum, which houses the tomb of Tamerlane, and the Shah-i-Zinda necropolis, which contains a series of stunning tombs and mausoleums. /n Another city worth visiting in Uzbekistan is Bukhara, which is one of the oldest cities in the world and has a history that dates back more than 2,500 years. The city's historic centre is a UNESCO World Heritage Site and features many ancient mosques, madrasas, and markets. The most famous of these is the Kalyan minaret, which stands over 45 metres tall and was built in the 12th century. /n Khiva is another city in Uzbekistan that is well worth a visit. The old town is surrounded by walls and is home to many historic buildings, including the Kunya-Ark citadel, the Juma Mosque, and the Pahlavan Mahmud Mausoleum. /n Finally, Uzbekistan is also known for its delicious cuisine. Some of the most popular dishes include plov (a rice dish with meat and vegetables), lagman (a noodle soup), and shashlik (grilled meat skewers). Uzbekistan is also famous for its bread, which is baked in traditional clay ovens and is an important part of the country's culture",
+			"language": "English, Russian",
+			"highlight": {
+				"0": "Samarkand: This ancient city is home to some of the most impressive Islamic architecture in the world, including the Registan, the Gur-e-Amir mausoleum, and the Shah-i-Zinda necropolis",
+				"1": "Bukhara: Another historic city, Bukhara is known for its many ancient mosques, madrasas, and markets. The Kalyan minaret is one of its most famous landmarks.",
+				"2": "Khiva: This walled city is a well-preserved example of an ancient Silk Road trading post, and is home to many historic buildings and monuments."
+			},
+			"tour_plan": {
+				"name": "Tour plan",
+				"0": {
+					"day": "Day 1. Tashkent",
+					"description": "Flight to Tashkent. Arrival and transfer to the hotel (15-20 minutes). Immediate early check-in (available from 08:00). Tashkent is one of the oldest cities on the Great Silk Road between China and Europe. The earliest references to Tashkent as a city settlement appeared in written sources in the 2nd century BC. In the Chinese annals the city is called Yueni or Shi in the records of the Persian king, Shampur, it appears as Chach; and in other Arabic sources, Shash. The name Tashkent first appeared in Turkish documents of the 9th to 12th centuries. In the 14-15th centuries it was the part of the Timurid Empire, and in the 16th century it was under the control of the Sheibanids dynasty. In 1865, after the conquest of Mikhail Chernyaev, Russian military leader, the city became under the rule of the Russian Empire and Russian government was established here. In 1930 Tashkent was declared the capital of Uzbekistan, former Uzbek SSR. The city is set out as a grid of straight, wide streets and avenues, interspersed with many green areas (parks, squares, and gardens) and fountains. Afternoon start the excursion along the new part of Tashkent: the Museum of Arts - The initial collection of the museum consisted of a hundred works of art from prince Nikolay Romanov and other individuals private collections, nationalized in April 1918. Those were mostly paintings and drawings by Russian and Western European masters, sculptures, furniture and porcelain. Immediately after establishing the museum, its collection was enlarged with works from the collection of the Turkestan local history museum. After visit coffee stop at the local coffee shop. Visit to Rakhimov's house where you will be introduced to the local ceramics.  Transfer back to the hotel for some rest. Dinner at the local restaurant. /n Grand Capital hotel 4* or similar ( B/L/D )",
+					"slug": "tashkent1day"
+				},
+				"1": {
+					"day": "Day 2. Tashkent-Samarkand ",
+					"description": "After breakfast we continue our tour in Tashkent. Visit to Khazrati Imam Complex consisting of Kaffal Shashi Mausoleum (16th c.), Barak-Khan Madrasah (16th c.), Tillya Sheikh Mosque, Muyi-Mubarak Madrasah - storehouse of the well-known Koran of Khalif Osman and gold hair of Prophet Muhammad, shopping at CHORSU bazaar. Lunch at the local restaurant. Later visit the Museum of Applied Arts, Amir Timur square and local metro. Transfer to the train station and departure to Samarkand by high speed train Night in Samarkand. /n Malika Classic hotel 3* or similar( B/L/D ).",
+					"slug": "tashkentsamarkand2day"
+				},
+				"2": {
+					"day": "Day 3. Samarkand ",
+					"description": "After breakfast we continue our tour in Tashkent. Visit to Khazrati Imam Complex consisting of Kaffal Shashi Mausoleum (16th c.), Barak-Khan Madrasah (16th c.), Tillya Sheikh Mosque, Muyi-Mubarak Madrasah - storehouse of the well-known Koran of Khalif Osman and gold hair of Prophet Muhammad, shopping at CHORSU bazaar. Lunch at the local restaurant. Later visit the Museum of Applied Arts, Amir Timur square and local metro. Transfer to the train station and departure to Samarkand by high speed train Night in Samarkand. /n Malika Classic hotel 3* or similar( B/L/D ).",
+					"slug": "samarkand3day"
+				},
+				"3": {
+					"day": "Day 4. Samarkand-Bukhara",
+					"description": "Breakfast. Drive to Bukhara via Guijduvan and visit ceramic work-shop on the way Pottery of Gijduvan is light, porous, thick-walled. There all shades of yellow and brown, slightly dilute green and blue. Any frills - tableware monochrome. It also uses a dark color glaze over the finest dark pattern. The main color 'absorbs' all the others and creates a 'marble' effect and ancient caravan saray of 11 century. Transfer to hotel. /n Komil boutique hotel or similar ( B/L/D )",
+					"slug": "samarkandbukhara4day"
+				},
+				"4": {
+					"day": "Day 5. Bukhara",
+					"description": "Breakfast at Bukhara hotel. /n City tour in Bukhara: Ismael Samani Mausoleum (the tomb of representatives of Samanids' (end of IX – beginning of X), Chashma Ayub Mausoleum (Spring of Job – XIV), Bolo-Hauz Mosque (beginning of XX), Citadel Ark (IV) – city in a city, Poi Kalon Ensemble (Pedestal of the Great), religious heart of Sacred Bukhara, consists of Minaret Kalon (XII), Kalon Mosque (XII), Miri Arab Madrassah (XVI),  Ulugbek’s Madrassah (1417), Madrassah Nodir Devanbeghi, Abdul Aziz Khan Madrassah, Magoki-Attori Mosque (dated XII-XVI centuries), Lyabi-Khauz Ensemble (dated XIV-XVII centuries), Kosh-Madrassah Ensemble (consisting of two resisting Madari-Abdullakhan Madrassah (Abdullakhan’s mother) and Abdullakhan Madrassah, Chor-Minor (four minarets).Free time: we advise you to visit Bukhara Dome Bazaars (dated 15-16 centuries): Toki Saraffon (the Dome of Moneychangers), Toki-Telpak Furushon (the Dome of Cap makers), Toki Zargaron (the Dome of jewelers) and Tim Abdullakhan (the Center of silk). /n Sample authentic local delicacies in the home of Rakhmon Toshey, a skilled tapestry craftsman. Visit the Hunarmand UNDP-assisted workshops. Dinner at local house. Overnight stay in Bukhara",
+					"slug": "bukhara5day"
+				},
+				"5": {
+					"day": "Day 6. Bukhara",
+					"description": "Breakfast at Bukhara hotel. /n There are Rulers’ palaces and mausoleums of Sheikhs are located out of Bukhara visit to Nakshbandi Sufi complex, visit to summer residence Sitorai Mokhi Khosa (dated XIX c.) with a fantastic collection of furniture and decorations of the walls. Lunch at the local restaurant. Later transfer to the train station and departure to Khiva by train. /n Asia hotel 4* or similar ( B/L/D )",
+					"slug": "bukhara6day"
+				},
+				"6": {
+					"day": "Day 7. Khiva",
+					"description": "Breakfast at Khiva hotel. Morning excursion around of Ichan-Kala. Caravans come to China from West to East and our route starts from Khiva, museum city under the sky. If you ever dreamed of getting into Eastern fairy tale, then your dreams come true. City tour in Khiva around: Ichan-Kala architectural complex (XII-XIX), the Residence of the last Khiva Khan including Ismail Khodja Mausoleum, Muhammed Amin Khan Madrassah, Kunya-Ark Castle (XVI-XVI), Kalta Minor Tower, Tash-Hovli Palace (XIX), Pahlavan Mahmud Mausoleum (XIV-XVIII), Juma Mosque (X) and other Khiva tourist sights. Narrow streets, carved “ayvans” veranda and doors, majestic minarets and mausoleums, heritage and arts – all kept with care in this city as great treasure. /n Enjoy a demonstration at a UNESCO silk workshop, where you will also have the opportunity to weave your own silk pieces. /n Night in Khiva.",
+					"slug": "bukhara7day"
+				},
+				"7": {
+					"day": "Day 8. Khiva-Nukus",
+					"description": "Breakfast. Transfer to Karakalpakstan 2 hours drive. Visit an ancient fortresses Toprak-Kala and Kizil-Kala.",
+					"slug": "khivanukus8day"
+				},
+				"8": {
+					"day": "Day 9. Airoport",
+					"description": "Transfer to the airport. Flight back home",
+					"slug": "Airoport9day"
+				}
+			}
+		},
+		"1": {
+			"country": "Uzbekistan",
+			"name": "Samarkand - Bukhara - Khiva - Urganch - Tashkent - Fergana - Kokand",
+			"price": "200",
+			"day": "8",
+			"night": "9",
+			"slug": "samarkand-bukhara-urganch-tashkent",
+			"photo_short": "images/resource/image-1.jpg",
+			"photo_full": "images/background/b-image-7.jpg",
+			"tour_detail": "Uzbekistan is a landlocked country located in Central Asia, bordered by Kazakhstan to the north, Kyrgyzstan to the northeast, Tajikistan to the southeast, Afghanistan to the south, and Turkmenistan to the southwest. The country has a rich history and culture, with many ancient cities and monuments that date back to the time of the Silk Road. /n One of the most popular cities to visit in Uzbekistan is Samarkand, which is home to some of the most stunning examples of Islamic architecture in the world. The Registan is a large public square that features three madrasas (Islamic schools) that date back to the 15th and 17th centuries. Other notable sights in Samarkand include the Gur-e-Amir mausoleum, which houses the tomb of Tamerlane, and the Shah-i-Zinda necropolis, which contains a series of stunning tombs and mausoleums. /n Another city worth visiting in Uzbekistan is Bukhara, which is one of the oldest cities in the world and has a history that dates back more than 2,500 years. The city's historic centre is a UNESCO World Heritage Site and features many ancient mosques, madrasas, and markets. The most famous of these is the Kalyan minaret, which stands over 45 metres tall and was built in the 12th century. /n Khiva is another city in Uzbekistan that is well worth a visit. The old town is surrounded by walls and is home to many historic buildings, including the Kunya-Ark citadel, the Juma Mosque, and the Pahlavan Mahmud Mausoleum. /n Finally, Uzbekistan is also known for its delicious cuisine. Some of the most popular dishes include plov (a rice dish with meat and vegetables), lagman (a noodle soup), and shashlik (grilled meat skewers). Uzbekistan is also famous for its bread, which is baked in traditional clay ovens and is an important part of the country's culture",
+			"language": "English, Russian",
+			"highlight": {
+				"0": "Samarkand: This ancient city is home to some of the most impressive Islamic architecture in the world, including the Registan, the Gur-e-Amir mausoleum, and the Shah-i-Zinda necropolis",
+				"1": "Bukhara: Another historic city, Bukhara is known for its many ancient mosques, madrasas, and markets. The Kalyan minaret is one of its most famous landmarks.",
+				"2": "Khiva: This walled city is a well-preserved example of an ancient Silk Road trading post, and is home to many historic buildings and monuments."
+			},
+			"tour_plan": {
+				"name": "Tour plan",
+				"0": {
+					"day": "Day 1. Samarkand",
+					"description": "Some rest at the hotel. Lunch. Visit to Kunigil village where you will be introduced to the process of paper making. And on the way back you can visit Ulugbek’s observatory. /n Malika classic hotel 3* or similar",
+					"slug": "tashkent1day"
+				},
+				"1": {
+					"day": "Day 2. Samarkand ",
+					"description": "Second day we enjoy a full day tour of Samarkand including the impressive Registan Square, surrounded on three sides by blue tiled madrassahs. It is a masterpiece of Islamic architecture and no picture can convey the magnificence of this square. Within Registan Square the oldest of the three structures is the Ulukbek Madrassah, built around 1420. The massive front portal is flanked by a pair of minarets and is decorated with marble panels around the base and blue, green turquoise and yellow tiles in the mosaic-work above. We continue to Tamerlaine's tomb, the Bibi Khanum Mosque, built in honor of Tamerlaine's wife. Around the mosque there is a buzzing local market and Shakhi-Zinda complex. /n Malika classic Hotel 3* or similar (B/-/-)",
+					"slug": "tashkentsamarkand2day"
+				},
+				"2": {
+					"day": "Day 3: Samarkand-Guijduvan-Bukhara",
+					"description": "This morning we will drive to Gijduvan and we will make a stop at the pottery studio of Master Alisher for a tour and introduction to famous Gijduvan ceramics. After lunch we continue our drive to Bukhara. Considered to be Central Asia’s holiest city, Bukhara is liberally sprinkled with an architectural legacy that spans a thousand years of history. A centre of trade, culture and scholarship for centuries, under the Samanids the city became a major intellectual centre of the Islamic world. Today we will visit the summer residence of the last Emir of Bukhara- Sitora-I-Mokhi Khosa located in outskirts of the town we’ll take in some of its highlights: the Friday Mosque and Lab-i Hauz, home to the 16th century Kukeldash Madrasah, the largest in the city. And Chor Minor medresah. /n Komil boutique Hotel 3* or similar (B/-/-)",
+					"slug": "samarkand3day"
+				},
+				"3": {
+					"day": "Day 4. Bukhara",
+					"description": "Full day tour around Bukhara, today we’ll take in some of its highlights, with visits planned to the imposing Ark of Bukhara and the Samanids Mausoleum, Chashma Ayub mausoleum. And Poi Kalon complex where you will see the tallest minaret in the city. Later in the afternoon, we return to the old town and will have a time to explore the old town with its narrow streets and trading domes. Visit to Jewish quarter and the Synagogue. Dinner at Davlyat’ house a famous Sufi ( optional ). Overnight in Bukhara. /n Komil boutique Hotel 3* or similar (B/-/-)",
+					"slug": "samarkandbukhara4day"
+				},
+				"4": {
+					"day": "Day 5: Bukhara-Khiva",
+					"description": "After breakfast we will take the longest drive of our tour from Bukhara to Khiva (480 km / approx. 8 hours’ with stops on the way), passing through Kyzyl Kum desert. Upon arrival check in the hotel. /n Asia hotel 3* or similar (B/-/-)",
+					"slug": "bukhara5day"
+				},
+				"5": {
+					"day": "Day 6: Khiva-Urgench-Tashkent",
+					"description": "Ancient Khiva was one of the most important trading cities along the old Silk Road and became capital of the Khanate of Khiva, home of the Uzbek nomadic tribes. In spite of Russian domination in the 19th century and later, much of its ancient heart has survived; today Khiva boasts some 50 historic monuments and beautifully preserved 18th and 19th century houses. Sheltered behind thick fortress walls, its palaces and harems still evoke something of its powerful past.  We have a full day here to take in some of Khiva’s numerous highlights, madrasahs and mechets. Evening flight to Tashkent. Upon arrival meet your driver at the airport. Transfer to the hotel. /n Grand Capital hotel 4* or similar (B/-/-)",
+					"slug": "bukhara6day"
+				},
+				"6": {
+					"day": "Day 7: Tashkent-Margilan-Fergana",
+					"description": "Today we enjoy a day tour in Tashkent including the visit to Khast Imam Complex, Chorsu market, the stunning edifice of the Alisher Navoi Opera and Ballet Theatre, local metro with a nice stations, Amir Timur square, the earthquake monument. Transfer to the train station and departure to Fergana by train at 5.20 p.m. Arrival at Margilan ( there is no train station In Fergana ). Transfer to the hotel ( 10-15 minutes - 12 km ). Check in. /n Asia hotel or similar ( B/-/-)",
+					"slug": "bukhara7day"
+				},
+				"7": {
+					"day": "Day 8: Margilan-Rishtan-Kokand-Tashkent",
+					"description": "Visit to local silk factory, later you’ll have an opportunity to see a famous ceramics of Rishtan and Kokand city on the way to Tashkent.",
+					"slug": "khivanukus8day"
+				}
+			}
+		}
+	}
+}
