@@ -29,7 +29,7 @@ export default function TravelSingle() {
 				return i
 			}
 			else {
-				return navigate('/')
+				// return navigate('/')
 			}
 		}
 	}
@@ -85,9 +85,13 @@ export default function TravelSingle() {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
-	  }, [])
+	}, [])
 
 	useEffect(() => {
+
+		if (index == undefined) {
+			navigate('/')
+		}
 
 		(function ($) {
 
@@ -230,7 +234,7 @@ export default function TravelSingle() {
 								<div className="location">
 									<h3>{t("map")}</h3>
 									<div className="map-box">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6142446.122637754!2d59.322642898280385!3d41.260082372734495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b20a5d676b1%3A0xca0a6dad7e841e20!2sUzbekistan!5e0!3m2!1spl!2spl!4v1682939195714!5m2!1spl!2spl" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6142446.122637754!2d59.322642898280385!3d41.260082372734495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b20a5d676b1%3A0xca0a6dad7e841e20!2sUzbekistan!5e0!3m2!1spl!2spl!4v1682939195714!5m2!1spl!2spl" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 										<div className="map-icon"><img src="images/resource/map-marker-2.png" alt="" /></div>
 									</div>
 								</div>
@@ -238,7 +242,7 @@ export default function TravelSingle() {
 									<h3>{t("frequently")}</h3>
 									<ul className="accordion-box faqs-accordion clearfix">
 										{["0", "1", "2", "3"].map((item, index) => (
-											<li className={`accordion block ${item == 0 ? 'active-block' : ''}`}>
+											<li key={index} className={`accordion block ${item == 0 ? 'active-block' : ''}`}>
 												<div className={`acc-btn ${item == 0 ? 'active' : ''}`}>{t(`faq.${item}.question`)}<span className="arrow fa fa-plus" /></div>
 												<div className={`acc-content ${item == 0 ? 'current' : ''}`}>
 													<div className="content">
@@ -401,7 +405,7 @@ export default function TravelSingle() {
 													</div>
 													<div className="form-group d-none col-xl-12 col-lg-12 col-md-12 col-sm-12">
 														<div className="field-inner">
-															<input type="text" name="package" value={user.package} required />
+															<input type="text" name="package" value={user.package} required readOnly/>
 														</div>
 													</div>
 													<div className="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">

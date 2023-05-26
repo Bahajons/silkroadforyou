@@ -1,0 +1,7 @@
+$ORIGIN silkroadforyou.com.
+$TTL 1800
+silkroadforyou.com. IN SOA ns1.digitalocean.com. hostmaster.silkroadforyou.com. 1685103074 10800 3600 604800 1800
+silkroadforyou.com. 1800 IN NS ns1.digitalocean.com.
+silkroadforyou.com. 1800 IN NS ns2.digitalocean.com.
+silkroadforyou.com. 1800 IN NS ns3.digitalocean.com.
+salomalaykum.silkroadforyou.com. 3600 IN A 64.227.38.12

@@ -97,7 +97,7 @@ export default function TravelPackages() {
 						<div className="packages-carousel">
 
 							{/*Block*/}
-							{['0', '1', '2', '3'].map((item, index) => (
+							{['0', '1', '2', '3','4','5'].map((item, index) => (
 								<div className="package-block" key={index}>
 									<div className="inner-box">
 										<div className="image-box">

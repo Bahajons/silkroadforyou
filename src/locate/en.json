@@ -706,124 +706,94 @@
 		},
 		{
 			"id": "kaz-kir036",
-			"country": "Kazakhstan, Kyrgyzstan ",
+			"country": "Kazakhstan, Kyrgyzstan",
 			"name": "Samarkand - Bukhara - Khiva - Dushanbe - Panjikent",
-			"title": "Amazing journey through Samarkand, Bukhara, Khiva, Dushanbe",
+			"title": "Amazing journey through Almaty, Issyk Lak, Bishkek",
 			"price": "200",
 			"day": "11",
 			"night": "12",
-			"slug": "uzbekistan-tajikistan-uzb-taj035",
-			"photo_short": "images/uzbekistan/resource/uzb-taj034_480x320.webp",
-			"photo_full": "images/uzbekistan/package_uzb-taj034_1920x720.webp",
-			"tour_detail": "Embarking on an amazing journey through Samarkand, Bukhara, Khiva, and Dushanbe promises a remarkable exploration of Central Asia's rich cultural heritage. Samarkand's grandeur, with its majestic architectural wonders like the Registan Square, will leave you in awe. Bukhara, a city steeped in history, invites you to wander through its ancient streets and immerse yourself in its captivating atmosphere. Khiva's Ichan Kala, a perfectly preserved old town, offers a glimpse into the past, transporting you back in time. And in Dushanbe, the capital of Tajikistan, you'll discover a blend of modernity and tradition, with its vibrant markets and intriguing landmarks. This journey promises to be a feast for the senses, filled with captivating sights, cultural encounters, and memories that will last a lifetime",
+			"slug": "kazakhstan-kyrgyzstan036",
+			"photo_short": "images/uzbekistan/resource/kaz-kyr036_480x320.webp",
+			"photo_full": "images/uzbekistan/package_kaz_kyr036_1920x720.webp",
+			"tour_detail": "Almaty, the starting point of your adventure, welcomes you with its cosmopolitan atmosphere and stunning surroundings. Explore the city's bustling streets, visit the iconic Zenkov Cathedral in Panfilov Park, and delve into the rich history at the Central State Museum. Don't miss the opportunity to ride the cable car to Kok Tobe Hill for panoramic views of the city. \nNext, venture towards Issyk Lake, a tranquil gem nestled in the picturesque mountains. The journey itself offers breathtaking landscapes as you drive through the Tien Shan range. Once at Issyk Lake, revel in its crystal-clear turquoise waters and enjoy the peaceful ambiance. You can go hiking in the nearby hills, have a picnic by the lakeshore, or simply relax and soak in the beauty of the surroundings. \nContinuing onwards, your path leads to Bishkek, the capital city of Kyrgyzstan. Immerse yourself in the vibrant atmosphere of its bustling bazaars, where you can browse local handicrafts and taste traditional Kyrgyz cuisine. Visit Ala-Too Square, the heart of the city, and explore its surrounding parks, such as Oak Park and Victory Square.",
 			"language": "English, Russian",
-			"airport": "Samarkand International Airport",
+			"airport": "Almart Airport",
 			"highlight": {
-				"0": "Samarkand's architectural marvels, such as the Registan Square, will transport you to a realm of splendor.",
-				"1": "Khujand: A bustling city with a rich historical past, featuring impressive monuments, bustling markets, and warm hospitality, making it a must-visit destination in Tajikistan.",
-				"2": "Iskander-kul Lake: A breathtaking alpine lake nestled amidst majestic mountains, offering pristine beauty and a tranquil retreat for nature lovers."
+				"0": "Almaty is nestled at the foothills of the majestic Tien Shan Mountains, providing a stunning backdrop to the cityscape.",
+				"1": "Naryn, the regional center, is a picturesque town nestled amidst the Tien Shan Mountains.",
+				"2": "Tashrabat, located in the southern part of Naryn, is home to the historic Tash Rabat Caravanserai, a well-preserved stone building that served as a resting place for traders along the Silk Road."
 			},
 			"tour_plan": {
-				"tour_day": "11",
+				"tour_day": "6",
 				"0": {
 					"day": "Day 1",
-					"place": "Istanbul-Samarkand",
-					"description": "Arrival and transfer to the hotel. Some rest. Visit to Kunigil village where you will be introduced to the process of paper making. And on the way back you can visit Ulugbek’s observatory. Malika classic hotel 3* or similar (-/L/D)",
+					"place": "Arrival in Almaty",
+					"description": "Excursion in Almaty: 28 Panfilovtsev Park, Monument of Glory, Museum of Folk Musical Instruments, Ascension Cathedral, central mosque, Kok-You, Medeo, Cimbulak, History Museum. Overnight in Almaty",
 					"slug": "tashkent1day"
 				},
 				"1": {
 					"day": "Day 2",
-					"place": "Samarkand",
-					"description": "Today we enjoy a full day tour of Samarkand including the impressive Registan Square, surrounded on three sides by blue tiled madrassahs. It is a masterpiece of Islamic architecture and no picture can convey the magnificence of this square. Within Registan Square the oldest of the three structures is the Ulukbek Madrassah, built around 1420. The massive front portal is flanked by a pair of minarets and is decorated with marble panels around the base and blue, green turquoise and yellow tiles in the mosaic-work above. We continue to Tamerlaine's tomb, the Bibi Khanum Mosque, built in honor of Tamerlaine's wife. Around the mosque there is a buzzing local market and Shakhi-Zinda complex. Evening we will visit a family house for traditional dinner cooking masterclass and dinner. Malika classic Hotel 3* or similar (B-L- D)",
+					"place": "Issyk Lak",
+					"description": ". Breakfast at the hotel. A trip to Issyk Lake, where you will enjoy the beautiful scenery and also visit the museum of the Golden Man. Transfer to the hotel",
 					"slug": "tashkentsamarkand2day"
 				},
 				"2": {
 					"day": "Day 3 ",
-					"place": "Samarkand-Guijduvan-Bukhara ",
-					"description": "This morning we will drive to Gijduvan and we will make a stop at pottery studio of Master Alisher for a tour and introduction to famous Gijduvan ceramics. After lunch we continue our drive to Bukhara. Considered to be Central Asia’s holiest city, Bukhara is liberally sprinkled with an architectural legacy that spans a thousand years of history. A centre of trade, culture and scholarship for centuries, under the Samanids the city became a major intellectual centre of the Islamic world. Today we will visit the summer residence of the last Emir of Bukhara- Sitora-I-Mokhi Khosa located in outskirts of the town we’ll take in some of its highlights: the Friday Mosque and Lab-i Hauz, home to the 16th century Kukeldash Madrasah, the largest in the city. And Chor Minor medresah. Amelia boutique Hotel 3* or similar (B-L-D)",
+					"place": "Breakfast. Departure to Bishkek",
+					"description": "Breakfast. Departure to Bishkek",
 					"slug": "samarkand3day"
 				},
 				"3": {
 					"day": "Day 4",
-					"place": "Bukhara",
-					"description": "Full day tour around Bukhara, today we’ll take in some of its highlights, with visits planned to the imposing Ark of Bukhara and the Samanids Mausoleum, Chashma Ayub mausoleum. And Poi Kalon complex where you will see the tallest minaret in the city. Later in the afternoon, we return to the old town and will have a time to explore the old town with its narrow streets and trading domes. Visit to Jewish quarter and the Synagogue. Dinner at Davlyat’ house. Overnight in Bukhara. Amelia boutique Hotel 3* or similar (B-L-D)",
+					"place": "Karakol-Jety-Oguz",
+					"description": "After breakfast, drive to Karakol, on the way visit the Fairy Tale Canyon. A short tour of the canyon. Later we will continue to the Jety-Oguz rocks. The next stop will be in the Dungan village of Yurdyk, where you will have lunch with an ethnic Dungan family. Russian Orthodox Church, Chinese-style Dungan mosque, and then a trip to Karakol. After all, transfer to Kochkor along the southern shore of Lake Issykul. Dinner and overnight at the Kochkor Guest House.",
 					"slug": "samarkandbukhara4day"
 				},
 				"4": {
 					"day": "Day 5",
 					"place": "Khiva-Urgench-Tashkent ",
-					"description": "After breakfast we will take the longest drive of our tour from Bukhara to Khiva (480 km / approx. 8 hours’ with stops on the way), passing through Kyzyl Kum desert. Upon arrival check in the hotel. Dinner and overnight. Zarafshan boutique hotel 3* or similar (B-L-D)",
+					"description": "Morning trip to the Tash-Rabat caravanserai on the Great Silk Road, a well-preserved 15th-century stone fortress in the At-Bashi mountain range, 100 km from the Kyrgyz-Chinese border of Torugart. There is a theory in history that it was connected with a Nestorian or Buddhist monastery. Today's trip will take you through the beautiful mountains and valleys of the Tien Shan, where we will enjoy stunning views of the At-Bashi mountain ranges. Upon arrival, a tour of Tashrabat Canyon. Dinner and overnight in yurts.",
 					"slug": "bukhara5day"
 				},
 				"5": {
 					"day": "Day 6",
-					"place": "Penjikent -Samarkand",
-					"description": "Ancient Khiva was one of the most important trading cities along the old Silk Road and became capital of the Khanate of Khiva, home of the Uzbek nomadic tribes. In spite of Russian domination in the 19th century and later, much of its ancient heart has survived; today Khiva boasts some 50 historic monuments and beautifully preserved 18th and 19th century houses. Sheltered behind thick fortress walls, its palaces and harems still evoke something of its powerful past.  We have a full day here to take in some of Khiva’s numerous highlights, madrasahs and mechets. Evening flight to Tashkent. Upon arrival dinner at the local restaurant. Grand Capital hotel 4* or similar (B-L-D)",
+					"place": "TASHRABAT - BISHKEK",
+					"description": "After an early breakfast, drive to Bishkek. Stop at the Burana Tower on the way. This minaret was built in the 11th century in the medieval city of Balasagun, the capital of the powerful Karakhanid empire. You can climb the spiral staircase of the minaret to enjoy the view of the picturesque Chui Valley. There is also an open-air museum, which presents a collection of ancient balbals, carved stone figures often found around ancient mounds. Later, a trip to the Ala-Archa National Park. After visiting the park, return to Bishkek. Upon arrival, a walking tour of Bishkek, you will see the Central Ala-Too Square, Oak Park, the Parliament building.. Overnight at the hotel.",
 					"slug": "bukhara6day"
-				},
-				"6": {
-					"day": "Day 7",
-					"place": "Tashkent ",
-					"description": "Today we enjoy a half day tour of Tashkent including the visit to Khast Imam Complex, the stunning edifice of the Alisher Navoi Opera and Ballet Theatre, local metro with a nice stations and Amir Timur square. Transfer to Tashkent International Airport (at 1 p.m.)  for flight to Bishkek at 3.20 p.m. upon arrival meet your guide and driver. Transfer to the hotel. City hotel or similar ( B-L-D)",
-					"slug": "bukhara7day"
-				},
-				"7": {
-					"day": "Day 8",
-					"place": "Bishkek",
-					"description": "Today you will visit the most beautiful places of the capital. Ala Archa National Park, Victory’s park, Ala Too square and national museum. City hotel or similar ( B-L-D)",
-					"slug": "khivanukus8day"
-				},
-				"8": {
-					"day": "Day 9",
-					"place": "Bishkek-Issyk Kul lake",
-					"description": "After breakfast drive to Issyk Kul, on the way visit to Burana tower. There are many beautiful places to visit like Konorchek canyon and Djeti Oguz cave. Amir hotel or similar ( B-L-D)",
-					"slug": "khivanukus8day"
-				},
-				"9": {
-					"day": "Day 10",
-					"place": "Issyk Kul-Tosh Rabat",
-					"description": "Today we continue our journey, a long drive to Tash-Rabat well-preserved 15th-century stone caravan saray, located at an altitude of 3,200 metres. Tash Rabat is completely made of rubble stone. You will enjoy the nature and picturesque view. Night in the yurts.",
-					"slug": "khivanukus8day"
-				},
-				"10": {
-					"day": "Day 11",
-					"place": "Tosh Rabat-Bishkek ",
-					"description": "After breakfast drive back to Bishkek. Upon arrival accommodation at the hotel. Free time. Dinner with a folk show. Night flight back home via Istanbul.",
-					"slug": "khivanukus8day"
 				}
 			},
 			"images": [
 				{
-					"200": "images/uzbekistan/resource/uzb-taj034_image1_200x200.webp",
-					"425": "images/uzbekistan/resource/uzb-taj034_image1_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image1_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image1_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/uzb-taj034_image2_200x200.webp",
-					"425": "images/uzbekistan/resource/uzb-taj034_image2_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image2_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image2_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/uzb-taj034_image3_200x200.webp",
-					"425": "images/uzbekistan/resource/uzb-taj034_image3_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image3_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image3_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/uzb-taj034_image4_200x200.webp",
-					"425": "images/uzbekistan/resource/uzb-taj034_image4_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image4_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image4_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/bukhara_image5_200x200.webp",
-					"425": "images/uzbekistan/resource/bukhara_image5_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image5_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image5_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/khiva_image6_200x200.webp",
-					"425": "images/uzbekistan/resource/khiva_image6_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image6_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image6_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/khiva_image7_200x200.webp",
-					"425": "images/uzbekistan/resource/khiva_image7_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image7_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image7_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/khiva_image8_200x200.webp",
-					"425": "images/uzbekistan/resource/khiva_image8_425x290.webp"
+					"200": "images/uzbekistan/resource/kaz-kyr036_image8_200x200.webp",
+					"425": "images/uzbekistan/resource/kaz-kyr036_image8_425x290.webp"
 				}
 			]
 		}
