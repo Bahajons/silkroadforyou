@@ -59,8 +59,8 @@ export default function MainSlider() {
 									<h1><span>{t(`slider.${item}.title`)}<i className="s-text">{t(`slider.${item}.title`)}</i></span></h1>
 									<div className="text">{t(`slider.${item}.text`)}</div>
 									<div className="links-box clearfix">
-										<div className="link"><a onClick={() => navigate('/about')} className="theme-btn btn-style-two"><span>Explore Now</span></a></div>
-										<div className="link"><a onClick={() => navigate('/about')} className="theme-btn btn-style-three"><span>About Us</span></a></div>
+										<div className="link"><a onClick={() => navigate('/about')} className="theme-btn btn-style-two"><span>{t('explore_now')}</span></a></div>
+										<div className="link"><a onClick={() => navigate('/about')} className="theme-btn btn-style-three"><span>{t('about_us')}</span></a></div>
 									</div>
 								</div>
 							</div>

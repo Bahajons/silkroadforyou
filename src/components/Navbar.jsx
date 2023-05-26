@@ -47,7 +47,6 @@ export default function Navbar() {
 
 		hiddenBarMenuConfig();
 
-
 		// Custom Scroll for Hidden Sidebar
 		if ($(".hidden-bar-wrapper").length) {
 
@@ -68,9 +67,6 @@ export default function Navbar() {
 			});
 		}
 		// console.log(typeof(window.jQuery))
-
-
-
 	}, [])
 
 	function close() {
@@ -152,7 +148,7 @@ export default function Navbar() {
 										<ul className="lang-list" id='lang-list'>
 											<li onClick={() => handleChangeLanguage('ru')}><a>Ru</a></li>
 											<li onClick={() => handleChangeLanguage('en')}><a>En</a></li>
-											<li onClick={() => handleChangeLanguage('uz')}><a>Uz</a></li>
+											{/* <li onClick={() => handleChangeLanguage('uz')}><a>Uz</a></li> */}
 										</ul>
 									</div>
 									<div className="link social">

@@ -147,6 +147,8 @@
 	"location": "Location",
 	"price": "Price",
 	"leave_at": "Leave your data",
+	"updates": "Updates",
+	"from_our_blog": "From Our Blog",
 	"packages": [
 		{
 			"id": "taj029",
@@ -468,7 +470,7 @@
 			"night": "12",
 			"slug": "uzbekistan-tajikistan-uzb-taj034",
 			"photo_short": "images/uzbekistan/resource/uzb-taj034_480x320.webp",
-			"photo_full": "images/uzbekistan/package_uzb-taj034_1920x720.webp",
+			"photo_full": "images/uzbekistan/resource/package_uzb-taj034_1920x720.webp",
 			"tour_detail": "Embarking on an amazing journey through Dushanbe, Panjikent, Samarkand, Bukhara, and Khiva promises an unforgettable adventure through the rich tapestry of Central Asia's history and culture. Starting in Dushanbe, the capital of Tajikistan, you'll be captivated by its blend of modernity and tradition, from its bustling bazaars to its impressive landmarks. Venturing to Panjikent, you'll delve into the ancient ruins of a once-thriving Silk Road city, witnessing the remnants of its glorious past.",
 			"language": "English, Russian",
 			"airport": "Samarkand International Airport",
@@ -590,8 +592,8 @@
 			"day": "11",
 			"night": "12",
 			"slug": "uzbekistan-tajikistan-uzb-taj035",
-			"photo_short": "images/uzbekistan/resource/uzb-taj034_480x320.webp",
-			"photo_full": "images/uzbekistan/package_uzb-taj034_1920x720.webp",
+			"photo_short": "images/uzbekistan/resource/uzb-taj035_480x320.webp",
+			"photo_full": "images/uzbekistan/package_uzb-taj035_1920x720.webp",
 			"tour_detail": "Embarking on an amazing journey through Samarkand, Bukhara, Khiva, and Dushanbe promises a remarkable exploration of Central Asia's rich cultural heritage. Samarkand's grandeur, with its majestic architectural wonders like the Registan Square, will leave you in awe. Bukhara, a city steeped in history, invites you to wander through its ancient streets and immerse yourself in its captivating atmosphere. Khiva's Ichan Kala, a perfectly preserved old town, offers a glimpse into the past, transporting you back in time. And in Dushanbe, the capital of Tajikistan, you'll discover a blend of modernity and tradition, with its vibrant markets and intriguing landmarks. This journey promises to be a feast for the senses, filled with captivating sights, cultural encounters, and memories that will last a lifetime",
 			"language": "English, Russian",
 			"airport": "Samarkand International Airport",

@@ -211,7 +211,7 @@ export default function Main() {
                       <div className="image"><img src="images/resource/image-56.webp" alt="" /></div>
                       <div className="image"><img src="images/resource/image-55.webp" alt="" /></div>
                     </div>
-                    <div className="exp"><span className="count">3</span> Successful <br />Years</div>
+                    <div className="exp"><span className="count">3</span> {t('successful')} <br />{t('years')}</div>
                   </div>
                 </div>
               </div>
@@ -472,7 +472,7 @@ export default function Main() {
                     <div className="image"><a href="#"><img src="images/uzbekistan/resource/client-3.webp" alt="" /></a></div>
                   </div>
                   {/*Block*/}
-                 
+
                 </div>
               </div>
             </div>
@@ -481,8 +481,8 @@ export default function Main() {
           <section className="news-section">
             <div className="auto-container">
               <div className="title-box centered">
-                <div className="subtitle">Updates</div>
-                <h2><span>From Our Blog</span></h2>
+                <div className="subtitle">{t('updates')}</div>
+                <h2><span>{t("from_our_blog")}</span></h2>
               </div>
               <div className="news-box">
                 <div className="bg-grad-left"><img src="images/background/bg-gradient-9.png" alt="" /></div>
@@ -717,7 +717,7 @@ export default function Main() {
             </div>
           </section>
           {/*Subscribe Section*/}
-          <Email/>
+          <Email />
           <Footer />
         </div>
         {/*End pagewrapper*/}

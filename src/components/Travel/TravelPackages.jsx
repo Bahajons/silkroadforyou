@@ -95,9 +95,8 @@ export default function TravelPackages() {
 					{/* <h1>{t(`packages.0.day`)} dsdsd</h1> */}
 					<div className="carousel-box">
 						<div className="packages-carousel">
-
 							{/*Block*/}
-							{['0', '1', '2', '3','4','5'].map((item, index) => (
+							{['0', '1', '2', '3', '4', '5'].map((item, index) => (
 								<div className="package-block" key={index}>
 									<div className="inner-box">
 										<div className="image-box">
@@ -115,15 +114,12 @@ export default function TravelPackages() {
 												<div className="rating"><a className="theme-btn"><i className="fa fa-star" /> <strong>4.8</strong>
 													{/* <span className="count">3210 Reviews</span> */}
 												</a></div>
-												<div className="price">{t("start_from")} <span className="amount">${t(`packages.${item}.price`)}</span></div>
+												{/* <div className="price">{t("start_from")} <span className="amount">${t(`packages.${item}.price`)}</span></div> */}
 											</div>
 										</div>
 									</div>
 								</div>
-
 							))}
-
-
 
 							{/* <div className="package-block">
 								<div className="inner-box">
