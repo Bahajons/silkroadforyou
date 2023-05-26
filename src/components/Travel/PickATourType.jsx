@@ -1,26 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-
-// import required modules
-import { Pagination, Autoplay, Navigation } from "swiper";
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function PickATourType() {
-
+	const { t } = useTranslation()
 
 	useEffect(() => {
 		(function ($) {
-
 			"use strict";
-
-
-
 			//Tour Types Carousel
 			if ($('.tour-types-carousel').length) {
 				$('.tour-types-carousel').slick({
@@ -222,8 +208,8 @@ export default function PickATourType() {
 				<div className="d-elem-2"><img src="images/resource/d-elem-3.png" alt="" /></div>
 				<div className="auto-container">
 					<div className="title-box centered wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div className="subtitle">Categories</div>
-						<h2><span>Pick A Tour Type</span></h2>
+						<div className="subtitle">{t("categories")}</div>
+						<h2><span>{t("pick_a_tour")}</span></h2>
 					</div>
 					<div className="carousel-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div className="d-elem-1"><img src="images/resource/d-elem-2.png" alt="" /></div>
@@ -235,8 +221,8 @@ export default function PickATourType() {
 									<div className="icon-box">
 										<div className="icon"><a href="#"><img src="images/resource/t-icon-4.png" alt="" /></a></div>
 									</div>
-									<h5><a href="#">Adventure</a></h5>
-									<a href="tour-packages.html" className="over-link" />
+									<h5><a >{t("adventure")}</a></h5>
+									<a className="over-link" />
 								</div>
 							</div>
 
@@ -246,8 +232,8 @@ export default function PickATourType() {
 									<div className="icon-box">
 										<div className="icon"><a href="#"><img src="images/resource/t-icon-5.png" alt="" /></a></div>
 									</div>
-									<h5><a href="#">Hiking</a></h5>
-									<a href="tour-packages.html" className="over-link" />
+									<h5><a href="#">{t("hiking")}</a></h5>
+									<a className="over-link" />
 								</div>
 							</div>
 							{/*Block*/}
@@ -256,8 +242,8 @@ export default function PickATourType() {
 									<div className="icon-box">
 										<div className="icon"><a href="#"><img src="images/resource/t-icon-6.png" alt="" /></a></div>
 									</div>
-									<h5><a href="#">Roamance</a></h5>
-									<a href="tour-packages.html" className="over-link" />
+									<h5><a href="#">{t("roamance")}</a></h5>
+									<a className="over-link" />
 								</div>
 							</div>
 							{/*Block*/}
@@ -266,88 +252,8 @@ export default function PickATourType() {
 									<div className="icon-box">
 										<div className="icon"><a href="#"><img src="images/resource/t-icon-7.png" alt="" /></a></div>
 									</div>
-									<h5><a href="#">Culture</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-blue">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-4.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Adventure</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-green">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-5.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Hiking</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-yellow">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-6.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Roamance</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-red">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-7.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Culture</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-blue">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-4.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Adventure</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-green">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-5.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Hiking</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-yellow">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-6.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Roamance</a></h5>
-									<a href="tour-packages.html" className="over-link" />
-								</div>
-							</div>
-							{/*Block*/}
-							<div className="tour-type-block bg-red">
-								<div className="inner-box">
-									<div className="icon-box">
-										<div className="icon"><a href="#"><img src="images/resource/t-icon-7.png" alt="" /></a></div>
-									</div>
-									<h5><a href="#">Culture</a></h5>
-									<a href="tour-packages.html" className="over-link" />
+									<h5><a href="#">{t("culture")}</a></h5>
+									<a className="over-link" />
 								</div>
 							</div>
 						</div>

@@ -4,21 +4,42 @@ import Navbar from './Navbar'
 import Main from './Main'
 import TravelSingle from './Travel/TravelSingle'
 import About from './About'
+import Footer from './Footer'
 
 export default function Router() {
 
 	return (
 		<>
-		<Navbar />
 			<BrowserRouter>
 				<Routes>
-					<Route path='/' element={<Main />} />
-
-					<Route path='/traveldetail' element={<TravelSingle />} />
-					<Route path="/traveldetail/:id" element={<TravelSingle />} />
-					{/* <Route path=":slug" element={<TravelSingle />} /> */}
-
-					<Route path='/about' element={<About />} />
+					<Route path='/' element={
+						<>
+							<Navbar />
+							<Main />
+						</>
+					} />
+					<Route path='/traveldetail' element={
+						<>
+							<Navbar />
+							<TravelSingle />
+							<Footer />
+						</>
+					} />
+					{/* <Route path="/traveldetail/:id" element={<TravelSingle />} /> */}
+					<Route path=':slug' element={
+						<>
+							<Navbar />
+							<TravelSingle />
+							<Footer />
+						</>
+					} />
+					<Route path='/about' element={
+						<>
+							<Navbar />
+							<About />
+							<Footer />
+						</>
+					} />
 				</Routes>
 
 			</BrowserRouter>

@@ -1,76 +1,140 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import $ from 'jquery'
+import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
+import emailjs from '@emailjs/browser';
 
 export default function TravelSingle() {
 
+	const navigate = useNavigate()
+	const { slug } = useParams()
+	const { t } = useTranslation()
+	const index = item()
 
+	const form = useRef();
+	let text = 'Thank you for choosing us. Our team will be in contact with you soon'
+	const [user, setUser] = useState({
+		name: '',
+		email: '',
+		number: '',
+		title: '',
+		package: `${t(`packages.${index}.title`)}, ${t(`packages.${index}.day`)}, Id: ${t(`packages.${index}.id`)}`,
+		message: '',
+	})
 
-
-
-	function handlePreloader() {
-		if ($('.loader-wrap').length) {
-			$('.loader-wrap').delay(300).fadeOut(300);
+	function item() {
+		for (let i = 0; i < t("packages.length"); i++) {
+			console.log(i);
+			if (t(`packages.${i}.slug`) === slug) {
+				return i
+			}
+			else {
+				return navigate('/')
+			}
 		}
 	}
 
-	// if ($(".preloader-close").length) {
-	// 	$(".preloader-close").on("click", function () {
-	// 		$('.loader-wrap').delay(300).fadeOut(300);
-	// 	})
-	// }
 
 
+	const sendEmail = () => {
 
-	// Accordion Box
-	if ($('.accordion-box').length) {
-		$(".accordion-box").on('click', '.acc-btn', function () {
+		emailjs.sendForm('service_n25ark9', 'template_8bbleec', form.current, 'tvsN5a2RY0lPaysWP')
+			.then((result) => {
+				console.log(result.text);
+				clean()
+			}, (error) => {
+				console.log(error.text);
+			});
+	};
 
-			var outerBox = $(this).parents('.accordion-box');
-			var target = $(this).parents('.accordion');
-
-			if ($(this).next('.acc-content').is(':visible')) {
-				//return false;
-				$(this).removeClass('active');
-				$(this).next('.acc-content').slideUp(300);
-				$(outerBox).children('.accordion').removeClass('active-block');
-			} else {
-				$(outerBox).find('.accordion .acc-btn').removeClass('active');
-				$(this).addClass('active');
-				$(outerBox).children('.accordion').removeClass('active-block');
-				$(outerBox).find('.accordion').children('.acc-content').slideUp(300);
-				$(this).next('.acc-content').slideDown(300);
-				$(this).parent('.accordion').addClass('active-block');
-			}
-		});
+	function clean() {
+		setUser({
+			...user,
+			name: '',
+			email: '',
+			number: '',
+			title: '',
+			message: ''
+		})
 	}
 
-	//Tabs Box
-	if ($('.tabs-box').length) {
-		$('.tabs-box .tab-buttons .tab-btn').on('click', function (e) {
-			e.preventDefault();
-			var target = $($(this).attr('data-tab'));
 
-			if ($(target).is(':visible')) {
-				return false;
-			} else {
-				target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
-				$(this).addClass('active-btn');
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
-				target.parents('.tabs-box').find('.tabs-content').find('.tab').removeClass('active-tab');
-				$(target).fadeIn(300);
-				$(target).addClass('active-tab');
-			}
-		});
+
+
+	function Tour_Plan() {
+		let a = []
+		for (let i = 0; i < parseInt(t(`packages.${index}.tour_plan.tour_day`)); i++) {
+			a.push(i)
+		}
+		return a.map((item, key) => (
+			<li className={`accordion block ${item == 0 ? 'active-block' : ''}`} key={key} >
+				<div className={`acc-btn ${item == 0 ? 'active' : ''}`}><span className="d-count">{t(`packages.${index}.tour_plan.${item}.day`)}</span> {t(`packages.${index}.tour_plan.${item}.place`)}<span className="arrow fa fa-angle-down" /></div>
+				<div className={`acc-content ${item == 0 ? 'current' : ''}`}>
+					<div className="content">
+						<div className="text">
+							<p>{t(`packages.${index}.tour_plan.${item}.description`)}</p>
+						</div>
+					</div>
+				</div>
+			</li>
+		))
 	}
+
+
+
+
 	useEffect(() => {
+		window.scrollTo(0, 0)
+	  }, [])
+
+	useEffect(() => {
+
 		(function ($) {
 
 			"use strict";
 
 
-			//Hide Loading Box (Preloader)
+			// Accordion Box
+			if ($('.accordion-box').length) {
+				$(".accordion-box").on('click', '.acc-btn', function () {
 
-		
+					var outerBox = $(this).parents('.accordion-box');
+					var target = $(this).parents('.accordion');
+
+					if ($(this).next('.acc-content').is(':visible')) {
+						//return false;
+						$(this).removeClass('active');
+						$(this).next('.acc-content').slideUp(300);
+						$(outerBox).children('.accordion').removeClass('active-block');
+					} else {
+						$(outerBox).find('.accordion .acc-btn').removeClass('active');
+						$(this).addClass('active');
+						$(outerBox).children('.accordion').removeClass('active-block');
+						$(outerBox).find('.accordion').children('.acc-content').slideUp(300);
+						$(this).next('.acc-content').slideDown(300);
+						$(this).parent('.accordion').addClass('active-block');
+					}
+				});
+			}
+
+			//Tabs Box
+			if ($('.tabs-box').length) {
+				$('.tabs-box .tab-buttons .tab-btn').on('click', function (e) {
+					e.preventDefault();
+					var target = $($(this).attr('data-tab'));
+
+					if ($(target).is(':visible')) {
+						return false;
+					} else {
+						target.parents('.tabs-box').find('.tab-buttons').find('.tab-btn').removeClass('active-btn');
+						$(this).addClass('active-btn');
+						target.parents('.tabs-box').find('.tabs-content').find('.tab').fadeOut(0);
+						target.parents('.tabs-box').find('.tabs-content').find('.tab').removeClass('active-tab');
+						$(target).fadeIn(300);
+						$(target).addClass('active-tab');
+					}
+				});
+			}
 
 		})(window.jQuery);
 
@@ -78,23 +142,26 @@ export default function TravelSingle() {
 
 
 
+
+	function submit(e) {
+		e.preventDefault()
+		sendEmail()
+	}
+
+
+
 	return (
 		<div>
+			{/* {console.log(typeof(parseInt(t(`packages.${index}.tour_plan.tour_day`))))} */}
 			{/* Banner Section */}
 			<section className="tour-single-banner">
-				<div className="image-layer" style={{ backgroundImage: 'url(images/background/b-image-7.jpg)' }} />
+				<div className="image-layer" style={{ backgroundImage: `url(${t(`packages.${index}.photo_full`)})` }} />
+				{/* <img src={t('packages.0.photo_full')} alt="" /> */}
 				<div className="auto-container">
 					<div className="content-box">
 						<div className="content clearfix">
 							<div className="t-type">
 								<div className="icon"><img src="images/resource/t-icon-1.png" alt="" /></div>
-								Tour Type <br /><strong>Adventure</strong>
-							</div>
-							<div className="links">
-								<ul className="clearfix">
-									<li><a href="#">Gallery <i className="far fa-images" /></a></li>
-									<li><a href="#">Video <i className="far fa-video-camera" /></a></li>
-								</ul>
 							</div>
 						</div>
 					</div>
@@ -110,214 +177,96 @@ export default function TravelSingle() {
 							<div className="content-inner">
 								<div className="sp-header">
 									<div className="loc-rat clearfix">
-										<div className="location">London</div>
-										<div className="rating"><a href="#" className="theme-btn"><i className="fa fa-star" /> <strong>4.8</strong>  <span className="count">3210 Reviews</span></a></div>
+										<div className="location">{t(`packages.${index}.country`)}</div>
+										<div className="rating"><a href="#" className="theme-btn"><i className="fa fa-star" /> <strong>4.8</strong>
+											{/* <span className="count">3210 Reviews</span> */}
+										</a></div>
 										<div className="add-fav"><a href="#"><i className="far fa-heart" /> Add to Wishlist</a></div>
 									</div>
-									<h1>Amazing Adventurous Travel Week in London</h1>
+									<h1>{t(`packages.${index}.title`)}</h1>
 									<div className="info clearfix">
-										<div className="duration"><i className="fa fa-clock" /> 5 Days 6 Nights</div>
-										<div className="persons"><i className="fa fa-user" /> 12</div>
+										<div className="duration"><i className="fa fa-clock" /> {t(`packages.${index}.day`)} {t('days')} {t(`packages.${index}.night`)} {t("nights")}</div>
+										{/* <div className="persons"><i className="fa fa-user" /> 12</div> */}
 									</div>
 								</div>
 								<div className="upper-content">
 									<div className="text-content">
-										<h3>Tour Details</h3>
-										<p>Runt ut labore et dolore magna aliqua enim ad minim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-										<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+										<h3>{t("tour_details")}</h3>
+										<p style={{ whiteSpace: 'break-spaces' }}>{t(`packages.${index}.tour_detail`)}</p>
 										<br />
-										<h5>Highlights</h5>
+										<h5>{t("highlights")}</h5>
 										<ul className="styled-list-one">
-											<li>Oecaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-											<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </li>
-											<li>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis </li>
-											<li>et quasi architecto beatae vitae dicta sunt explica</li>
+											{["0", "1", "2"].map((item) => (
+												<li key={item}>{t(`packages.${index}.highlight.${item}`)}</li>
+											))}
 										</ul>
 									</div>
 									<div className="basic-info">
 										<div className="i-block clearfix">
-											<h5>Basic Information</h5>
+											<h5>{t("basic_info")}</h5>
 										</div>
 										<div className="i-block clearfix">
-											<div className="i-title">Destination</div>
-											<div className="i-content">England</div>
+											<div className="i-title">{t("destination")}</div>
+											<div className="i-content">{t(`packages.${index}.country`)}</div>
 										</div>
 										<div className="i-block clearfix">
-											<div className="i-title">Departure</div>
-											<div className="i-content">Dhaka International Airport, Dhaka</div>
+											<div className="i-title">{t("departure")}</div>
+											<div className="i-content">{t(`packages.${index}.airport`)}</div>
 										</div>
 										<div className="i-block clearfix">
-											<div className="i-title">Departure Time</div>
-											<div className="i-content">03.00 Pm GMT</div>
-										</div>
-										<div className="i-block clearfix">
-											<div className="i-title">Return Time</div>
-											<div className="i-content">8.00 AM GMT</div>
-										</div>
-										<div className="i-block clearfix">
-											<div className="i-title">Language</div>
-											<div className="i-content">English, Bangla</div>
-										</div>
-										<div className="i-block clearfix">
-											<div className="i-title">Included</div>
-											<div className="i-content">
-												<ul className="styled-list-two">
-													<li>Oecaecat cupidatat non proident sunt</li>
-													<li>Sed ut perspiciatis unde omnis iste </li>
-													<li>Doloremque laudantium, totam rem aperiam</li>
-													<li>Wuasi architecto beatae vitae dicta</li>
-												</ul>
-											</div>
-										</div>
-										<div className="i-block clearfix">
-											<div className="i-title">Not Included</div>
-											<div className="i-content">
-												<ul className="styled-list-three">
-													<li>Oecaecat cupidatat non proident sunt</li>
-													<li>Sed ut perspiciatis unde omnis iste </li>
-													<li>Doloremque laudantium, totam rem aperiam</li>
-												</ul>
-											</div>
+											<div className="i-title">{t("language")}</div>
+											<div className="i-content">{t(`packages.${index}.language`)}</div>
 										</div>
 									</div>
 								</div>
 								<div className="t-plans">
-									<h3>Tour Plans</h3>
+									<h3>{t("tour_plans")}</h3>
 									<ul className="accordion-box tp-accordion clearfix">
 										{/*Block*/}
-										<li className="accordion block active-block">
-											<div className="acc-btn active"><span className="d-count">Day 1</span> When the musics over turn off the light <span className="arrow fa fa-angle-down" /></div>
-											<div className="acc-content current">
-												<div className="content">
-													<div className="text">
-														<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium</p>
-														<ul>
-															<li>Oecaecat cupidatat non proident sunt</li>
-															<li>qui officia deserunt mollit</li>
-															<li>Anim id est laborum.</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
-										{/*Block*/}
-										<li className="accordion block">
-											<div className="acc-btn"><span className="d-count">Day 2</span> When the musics over turn off the light <span className="arrow fa fa-angle-down" /></div>
-											<div className="acc-content">
-												<div className="content">
-													<div className="text">
-														<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium</p>
-														<ul>
-															<li>Oecaecat cupidatat non proident sunt</li>
-															<li>qui officia deserunt mollit</li>
-															<li>Anim id est laborum.</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
-										{/*Block*/}
-										<li className="accordion block">
-											<div className="acc-btn"><span className="d-count">Day 3</span> When the musics over turn off the light <span className="arrow fa fa-angle-down" /></div>
-											<div className="acc-content">
-												<div className="content">
-													<div className="text">
-														<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium</p>
-														<ul>
-															<li>Oecaecat cupidatat non proident sunt</li>
-															<li>qui officia deserunt mollit</li>
-															<li>Anim id est laborum.</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
-										{/*Block*/}
-										<li className="accordion block">
-											<div className="acc-btn"><span className="d-count">Day 4</span> When the musics over turn off the light <span className="arrow fa fa-angle-down" /></div>
-											<div className="acc-content">
-												<div className="content">
-													<div className="text">
-														<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium</p>
-														<ul>
-															<li>Oecaecat cupidatat non proident sunt</li>
-															<li>qui officia deserunt mollit</li>
-															<li>Anim id est laborum.</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
+										<Tour_Plan />
 									</ul>
 								</div>
+
 								<div className="location">
-									<h3>Map</h3>
+									<h3>{t("map")}</h3>
 									<div className="map-box">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453478.8006792069!2d152.71300288692046!3d-27.38186310374308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91579aac93d233%3A0x402a35af3deaf40!2sBrisbane%20QLD%2C%20Australia!5e0!3m2!1sen!2s!4v1679456478116!5m2!1sen!2s" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6142446.122637754!2d59.322642898280385!3d41.260082372734495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b20a5d676b1%3A0xca0a6dad7e841e20!2sUzbekistan!5e0!3m2!1spl!2spl!4v1682939195714!5m2!1spl!2spl" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 										<div className="map-icon"><img src="images/resource/map-marker-2.png" alt="" /></div>
 									</div>
 								</div>
 								<div className="t-faqs">
-									<h3>Frequently Asked Questions</h3>
+									<h3>{t("frequently")}</h3>
 									<ul className="accordion-box faqs-accordion clearfix">
-										{/*Block*/}
-										<li className="accordion block active-block">
-											<div className="acc-btn active"> What is the best way to enjoy this trip? <span className="arrow fa fa-plus" /></div>
-											<div className="acc-content current">
-												<div className="content">
-													<div className="text">
-														<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium. Jiboner kaytatare tumi dube jao onabil akashe shunnotay aj amar dhusor rongin somoye.</p>
+										{["0", "1", "2", "3"].map((item, index) => (
+											<li className={`accordion block ${item == 0 ? 'active-block' : ''}`}>
+												<div className={`acc-btn ${item == 0 ? 'active' : ''}`}>{t(`faq.${item}.question`)}<span className="arrow fa fa-plus" /></div>
+												<div className={`acc-content ${item == 0 ? 'current' : ''}`}>
+													<div className="content">
+														<div className="text">
+															<p>{t(`faq.${item}.answer`)}</p>
+														</div>
 													</div>
 												</div>
-											</div>
-										</li>
+											</li>
+
+										))}
 										{/*Block*/}
-										<li className="accordion block">
-											<div className="acc-btn"> How can I get a full refund of this trip if I don’t go? <span className="arrow fa fa-plus" /></div>
-											<div className="acc-content">
-												<div className="content">
-													<div className="text">
-														<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium. Jiboner kaytatare tumi dube jao onabil akashe shunnotay aj amar dhusor rongin somoye.</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										{/*Block*/}
-										<li className="accordion block">
-											<div className="acc-btn"> What is the cancellation policy? <span className="arrow fa fa-plus" /></div>
-											<div className="acc-content">
-												<div className="content">
-													<div className="text">
-														<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium. Jiboner kaytatare tumi dube jao onabil akashe shunnotay aj amar dhusor rongin somoye.</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										{/*Block*/}
-										<li className="accordion block">
-											<div className="acc-btn"> When the musics over turn off the light? <span className="arrow fa fa-plus" /></div>
-											<div className="acc-content">
-												<div className="content">
-													<div className="text">
-														<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicrum. Sed ut perspiciatis unde asi architecto beata omnis iste natus error sit voluptatem accusantium dolore mque laudantium. Jiboner kaytatare tumi dube jao onabil akashe shunnotay aj amar dhusor rongin somoye.</p>
-													</div>
-												</div>
-											</div>
-										</li>
 									</ul>
 								</div>
 								<div className="t-gallery">
 									<h3>Media Gallery</h3>
 									<div className="images">
+										{/* <img src="images/uzbekistan/resource/khiva_image7_425x290.webp" alt="" /> */}
 										<ul className="clearfix">
-											<li><div className="image"><a href="images/resource/image-11.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-9.jpg" alt="" /></a></div></li>
-											<li><div className="image"><a href="images/resource/image-12.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-10.jpg" alt="" /></a></div></li>
-											<li><div className="image"><a href="images/resource/image-13.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-11.jpg" alt="" /></a></div></li>
-											<li><div className="image"><a href="images/resource/image-14.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-12.jpg" alt="" /></a></div></li>
-											<li><div className="image"><a href="images/resource/image-15.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-13.jpg" alt="" /></a></div></li>
-											<li><div className="image"><a href="images/resource/image-19.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-14.jpg" alt="" /></a></div></li>
-											<li><div className="image"><a href="images/resource/image-17.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-15.jpg" alt="" /></a></div></li>
-											<li><div className="image"><a href="images/resource/image-18.jpg" className="lightbox-image" data-fancybox="SbGallery"><img src="images/resource/g-t-16.jpg" alt="" /></a></div></li>
+											{["0", "1", "2", "3", "4", "5", "6", "7", "8"].map((item, key) => (
+												<li key={key}>
+													<div className="image">
+														<a href={t(`packages.${index}.images.${item}.425`)} className="lightbox-image" data-fancybox="SbGallery">
+															<img src={t(`packages.${index}.images.${item}.200`)} alt="" />
+														</a>
+													</div>
+												</li>
+											))}
 										</ul>
 									</div>
 								</div>
@@ -328,35 +277,35 @@ export default function TravelSingle() {
 											<div className="row clearfix">
 												<div className="rev-left col-lg-4 col-md-4 col-sm-12">
 													<div className="count">4.9</div>
-													<div className="level"><i className="far fa-face-smile" /> Excellent</div>
-													<div className="b-on">Based on 2100 Reviews</div>
+													<div className="level"><i className="far fa-face-smile" /> {t("excellent")}</div>
+													{/* <div className="b-on">Based on 2100 Reviews</div> */}
 												</div>
 												<div className="rev-right col-lg-8 col-md-8 col-sm-12">
 													<div className="cat">
-														<div className="c-title">Service</div>
-														<div className="p-bar"><div className="p-fill p-fill-bar" data-percent="82%" /></div>
-														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={90} data-speed={2000}>0</span>%</span></div>
+														<div className="c-title">{t("service")}</div>
+														<div className="p-bar"><div className="p-fill p-fill-bar" data-percent="12%" /></div>
+														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={90} data-speed={2000}>70</span>%</span></div>
 													</div>
 													<div className="cat">
-														<div className="c-title">Accomodation</div>
+														<div className="c-title">{t("accomodation")}</div>
 														<div className="p-bar"><div className="p-fill p-fill-bar" data-percent="80%" /></div>
-														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={80} data-speed={2000}>0</span>%</span></div>
+														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={80} data-speed={2000}>84</span>%</span></div>
 													</div>
 													<div className="cat">
-														<div className="c-title">Location</div>
+														<div className="c-title">{t('location')}</div>
 														<div className="p-bar"><div className="p-fill p-fill-bar" data-percent="98%" /></div>
-														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={98} data-speed={2000}>0</span>%</span></div>
+														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={98} data-speed={2000}>70</span>%</span></div>
 													</div>
 													<div className="cat">
-														<div className="c-title">Price</div>
+														<div className="c-title">{t('price')}</div>
 														<div className="p-bar"><div className="p-fill p-fill-bar" data-percent="70%" /></div>
-														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={70} data-speed={2000}>0</span>%</span></div>
+														<div className="c-per"><span className="count-box"><span className="count-text" data-stop={70} data-speed={2000}>80</span>%</span></div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div className="reviews">
+									{/* <div className="reviews">
 										<div className="rev-box">
 											<div className="inner">
 												<div className="rev-header clearfix">
@@ -424,58 +373,44 @@ export default function TravelSingle() {
 											</div>
 										</div>
 										<div className="see-all"><a href="#" className="theme-btn">View All <i className="fa fa-external-link" /></a></div>
-									</div>
-									<h3>Add A Review</h3>
+									</div> */}
+									<h3>{t("leave_at")}</h3>
 									<div className="add-review">
 										<div className="form-box site-form">
-											<form method="post" action="index.html">
+											<form onSubmit={submit} ref={form}>
 												<div className="row clearfix">
 													<div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
-														<div className="s-rev-option">
-															<span className="ser-ttl">Service</span>
-															<a href="#" className="rat"><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /></a>
-														</div>
-													</div>
-													<div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
-														<div className="s-rev-option">
-															<span className="ser-ttl">Location</span>
-															<a href="#" className="rat"><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /></a>
-														</div>
-													</div>
-													<div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
-														<div className="s-rev-option">
-															<span className="ser-ttl">Accomodation</span>
-															<a href="#" className="rat"><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /></a>
-														</div>
-													</div>
-													<div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
-														<div className="s-rev-option">
-															<span className="ser-ttl">Price</span>
-															<a href="#" className="rat"><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /></a>
+														<div className="field-inner">
+															<input type="text" name="name" placeholder="Your name" onChange={(e) => { setUser({ ...user, [e.target.name]: e.target.value }) }} value={user.name} required />
 														</div>
 													</div>
 													<div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 														<div className="field-inner">
-															<input type="text" name="field-name" defaultValue placeholder="Your name" required />
-														</div>
-													</div>
-													<div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
-														<div className="field-inner">
-															<input type="email" name="field-name" defaultValue placeholder="Your email" required />
+															<input type="email" name="email" placeholder="Your email" onChange={(e) => { setUser({ ...user, [e.target.name]: e.target.value }) }} value={user.email} required />
 														</div>
 													</div>
 													<div className="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
 														<div className="field-inner">
-															<input type="text" name="field-name" defaultValue placeholder="Review title" required />
+															<input type="text" name="number" placeholder="Number" onChange={(e) => { setUser({ ...user, [e.target.name]: e.target.value }) }} value={user.number} required />
 														</div>
 													</div>
 													<div className="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
 														<div className="field-inner">
-															<textarea name="field-name" placeholder="Start writing your review here" required defaultValue={""} />
+															<input type="text" name="title" placeholder="Title" onChange={(e) => { setUser({ ...user, [e.target.name]: e.target.value }) }} value={user.title} required />
+														</div>
+													</div>
+													<div className="form-group d-none col-xl-12 col-lg-12 col-md-12 col-sm-12">
+														<div className="field-inner">
+															<input type="text" name="package" value={user.package} required />
 														</div>
 													</div>
 													<div className="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
-														<button type="submit" className="theme-btn btn-style-one"><span>Submit Review</span></button>
+														<div className="field-inner">
+															<textarea name="message" placeholder="Message" onChange={(e) => { setUser({ ...user, [e.target.name]: e.target.value }) }} required value={user.message} />
+														</div>
+													</div>
+													<div className="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+														<button type="submit" className="theme-btn btn-style-one"><span>{t('send')}</span></button>
 													</div>
 												</div>
 											</form>
@@ -581,43 +516,20 @@ export default function TravelSingle() {
 								{/*Widget*/}
 								<div className="dsp-widget get-help-widget">
 									<div className="inner">
-										<h6>Get Help</h6>
-										<h3>Need Help to Book?</h3>
-										<div className="text">Keriam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </div>
+										<h6>{t('get_help')}</h6>
+										<h3>{t('need_help')}</h3>
+										{/* <div className="text">Keriam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </div> */}
 										<div className="call-to">
-											<a href="tel:+1234567890"><i className="icon fa fa-phone" /> Call Us <span className="nmbr">+123 456 7890</span></a>
+											<a href="tel:+1234567890"><i className="icon fa fa-phone" /> {t("call_us")}<span className="nmbr">+123 456 7890</span></a>
 										</div>
 									</div>
 								</div>
 								{/*Widget*/}
-								<div className="dsp-widget similar-widget">
-									<div className="inner">
-										<h3>You might also like</h3>
-										{/*Logo*/}
-										<div className="posts">
-											<div className="post">
-												<div className="image"><a href="#"><img src="images/resource/news-thumb-1.jpg" alt="" /></a></div>
-												<h6><a href="#">Amazing Adventurous trip to Amazon rain forest </a></h6>
-												<div className="price">Starts from <span className="amount">$399</span></div>
-											</div>
-											<div className="post">
-												<div className="image"><a href="#"><img src="images/resource/news-thumb-2.jpg" alt="" /></a></div>
-												<h6><a href="#">Amazing Adventure trip to Amazon rain forest</a></h6>
-												<div className="price">Starts from <span className="amount">$399</span></div>
-											</div>
-											<div className="post">
-												<div className="image"><a href="#"><img src="images/resource/news-thumb-6.jpg" alt="" /></a></div>
-												<h6><a href="#">Amazing Adventure trip to Amazon rain forest</a></h6>
-												<div className="price">Starts from <span className="amount">$399</span></div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div >
 	)
 }

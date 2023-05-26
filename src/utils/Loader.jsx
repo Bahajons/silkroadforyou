@@ -4,14 +4,21 @@ export default function Loader() {
 
     useEffect(() => {
 
+        Load()
+    }, [])
+    function Load() {
         (function ($) {
             $(window).on('load', function () {
-                handlePreloader();
+                // handlePreloader();
                 if ($('body.page-loaded').length) {
                     $('body').addClass('page-done');
                 }
                 //   enableDefaultMasonry();
             });
+            
+            setTimeout(() => {
+                handlePreloader();
+            }, 500);
 
             //Hide Loading Box (Preloader)
             function handlePreloader() {
@@ -21,8 +28,7 @@ export default function Loader() {
             }
         })(window.jQuery);
 
-    }, [])
-
+    }
 
 
 

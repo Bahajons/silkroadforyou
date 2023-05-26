@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Swiper from 'swiper';
+import $ from 'jquery'
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function MainSlider() {
 
 	const navigate = useNavigate()
+	const { t } = useTranslation()
 
 	useEffect(() => {
 		(function ($) {
 			if ($('.banner-slider').length) {
-				var swiper = new Swiper('.banner-slider', {
+				const swiper=new Swiper('.banner-slider', {
 					autoplay: true,
 					autoplaySpeed: 7000,
 					effect: "fade",
@@ -19,8 +23,9 @@ export default function MainSlider() {
 					spaceBetween: 0,
 					loop: true,
 					pagination: true,
+					navigate: true,
 					autoplay: {
-						delay: 2000
+						delay: 1000
 					},
 					navigation: {
 						enabled: true,
@@ -33,6 +38,41 @@ export default function MainSlider() {
 	}, [])
 
 
+	function Sliders() {
+
+		let a = []
+		for (let i = 0; i < parseInt(t(`slider_count`)); i++) {
+			a.push(i)
+		}
+		console.log(a);
+
+		return a.map((item, key) => (
+			// <SwiperSlide>
+
+			<div className="swiper-slide slide-item" key={key}>
+				<div className="image-layer" style={{ backgroundImage: `url(${t(`slider.${item}.img`)})` }} />
+				<div className="auto-container">
+					<div className="content-box">
+						<div className="content">
+							<div className="clearfix">
+								<div className="inner">
+									<h1><span>{t(`slider.${item}.title`)}<i className="s-text">{t(`slider.${item}.title`)}</i></span></h1>
+									<div className="text">{t(`slider.${item}.text`)}</div>
+									<div className="links-box clearfix">
+										<div className="link"><a onClick={() => navigate('/about')} className="theme-btn btn-style-two"><span>Explore Now</span></a></div>
+										<div className="link"><a onClick={() => navigate('/about')} className="theme-btn btn-style-three"><span>About Us</span></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			// </SwiperSlide>
+		))
+
+	}
+
 
 	return (
 		<div>
@@ -41,15 +81,23 @@ export default function MainSlider() {
 				<div className="banner-container">
 					<div className="banner-slider">
 						<div className="swiper-wrapper">
+							{/* <Swiper
+								spaceBetween={50}
+								slidesPerView={3}
+								onSlideChange={() => console.log('slide change')}
+								onSwiper={(swiper) => console.log(swiper)}
+							> */}
 							{/*Slide Item*/}
-							<div className="swiper-slide slide-item">
+							<Sliders />
+							{/* </Swiper> */}
+							{/* <div className="swiper-slide slide-item">
 								<div className="image-layer" style={{ backgroundImage: 'url(images/main-slider/main-slider1.webp)' }} />
 								<div className="auto-container">
 									<div className="content-box">
 										<div className="content">
 											<div className="clearfix">
 												<div className="inner">
-													<h1><span>Adventure<i className="s-text">Adventure</i></span></h1>
+													<h1><span>{ }<i className="s-text">Adventure</i></span></h1>
 													<div className="text">Disover top places and enjoy extreme activities around the world with a cheap price.</div>
 													<div className="links-box clearfix">
 														<div className="link"><a onClick={() => navigate('/about')} className="theme-btn btn-style-two"><span>Explore Now</span></a></div>
@@ -60,9 +108,9 @@ export default function MainSlider() {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> */}
 							{/*Slide Item*/}
-							<div className="swiper-slide slide-item">
+							{/* <div className="swiper-slide slide-item">
 								<div className="image-layer" style={{ backgroundImage: 'url(images/main-slider/main-slider3.webp)' }} />
 								<div className="auto-container">
 									<div className="content-box">
@@ -80,9 +128,9 @@ export default function MainSlider() {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> */}
 							{/*Slide Item*/}
-							<div className="swiper-slide slide-item">
+							{/* <div className="swiper-slide slide-item">
 								<div className="image-layer" style={{ backgroundImage: 'url(images/main-slider/main-slider2.webp)' }} />
 								<div className="auto-container">
 									<div className="content-box">
@@ -100,10 +148,11 @@ export default function MainSlider() {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
-						<div className="swiper-button-prev"><span className="fa fa-angle-left" /></div>
-						<div className="swiper-button-next"><span className="fa fa-angle-right" /></div>
+							<div className="swiper-pagination"></div>
+						<div className="swiper-button-prev" ><span className="fa fa-angle-left" /></div>
+						<div className="swiper-button-next" ><span className="fa fa-angle-right" /></div>
 					</div>
 				</div>
 			</section>
