@@ -161,7 +161,7 @@ export default function Navbar() {
 										</ul>
 									</div>
 									<div className="link call-to">
-										<a href="tel:+1234567890"><i className="icon fa fa-phone" /> {t("call_us")} <span className="nmbr">+123 456 7890</span></a>
+										<a href="tel:+998935609055"><i className="icon fa fa-phone" /> {t("call_us")} <span className="nmbr">+998935609055</span></a>
 									</div>
 								</div>
 							</div>
