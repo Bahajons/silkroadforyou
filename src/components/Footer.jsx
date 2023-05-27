@@ -18,14 +18,14 @@ export default function Footer() {
 										<div className="footer-logo"><a href="index.html" title="Travilo"><img src="images/logo.webp" alt="" title="Travilo" /></a></div>
 										<div className="footer-info">
 											<ul className="info">
-												<li className="address"><a href="#"><i className="icon fa fa-map-marker-alt" /> Awesome Road, New York, Usa</a></li>
-												<li className="phone"><a href="tel:+123456789000"><i className="icon fa fa-phone" /> +123 456 789000</a></li>
-												<li className="email"><a href="mailto:hello@travilo.com"><i className="icon fa fa-envelope" /> hello@travilo.com</a></li>
+												<li className="address"><a href="#"><i className="icon fa fa-map-marker-alt" /> Alisher Navoiy street, Tashkent, Uzbekistan</a></li>
+												<li className="phone"><a href="tel:+998935609055"><i className="icon fa fa-phone" /> +998935609055</a></li>
+												<li className="email"><a href="mailto:hello@travilo.com"><i className="icon fa fa-envelope" /> hello@silkroad.com</a></li>
 											</ul>
 											<ul className="social-links clearfix">
 												<li><a href="#" className="facebook"><i className="fab fa-facebook-f" /></a></li>
 												<li><a href="#" className="twitter"><i className="fab fa-telegram" /></a></li>
-												<li><a href="#" className="linkedin"><i className="fab fa-whatsapp" /></a></li>
+												<li><a href="https://wa.me/998935609055" className="linkedin"><i className="fab fa-whatsapp" /></a></li>
 												<li><a href="#" className="youtube"><i className="fab fa-youtube" /></a></li>
 												<li><a href="#" className="youtube"><i className="fab fa-instagram" /></a></li>
 											</ul>

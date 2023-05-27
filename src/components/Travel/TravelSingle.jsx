@@ -10,7 +10,7 @@ export default function TravelSingle() {
 	const { slug } = useParams()
 	const { t } = useTranslation()
 	const index = item()
-
+	const [sent, setSent] = useState(false)
 	const form = useRef();
 	let text = 'Thank you for choosing us. Our team will be in contact with you soon'
 	const [user, setUser] = useState({
@@ -41,6 +41,7 @@ export default function TravelSingle() {
 		emailjs.sendForm('service_n25ark9', 'template_8bbleec', form.current, 'tvsN5a2RY0lPaysWP')
 			.then((result) => {
 				console.log(result.text);
+				setSent(true)
 				clean()
 			}, (error) => {
 				console.log(error.text);
@@ -381,6 +382,7 @@ export default function TravelSingle() {
 									<h3>{t("leave_at")}</h3>
 									<div className="add-review">
 										<div className="form-box site-form">
+											{sent ? <i className='text-primary'>{text}</i> : ""}
 											<form onSubmit={submit} ref={form}>
 												<div className="row clearfix">
 													<div className="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
@@ -405,7 +407,7 @@ export default function TravelSingle() {
 													</div>
 													<div className="form-group d-none col-xl-12 col-lg-12 col-md-12 col-sm-12">
 														<div className="field-inner">
-															<input type="text" name="package" value={user.package} required readOnly/>
+															<input type="text" name="package" value={user.package} required readOnly />
 														</div>
 													</div>
 													<div className="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -524,7 +526,7 @@ export default function TravelSingle() {
 										<h3>{t('need_help')}</h3>
 										{/* <div className="text">Keriam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </div> */}
 										<div className="call-to">
-											<a href="tel:+1234567890"><i className="icon fa fa-phone" /> {t("call_us")}<span className="nmbr">+123 456 7890</span></a>
+											<a href="tel:+998935609055"><i className="icon fa fa-phone" /> {t("call_us")}<span className="nmbr">+998 93 560 90 55</span></a>
 										</div>
 									</div>
 								</div>

@@ -130,7 +130,7 @@ export default function Navbar() {
 												</li> */}
 												<li><a onClick={() => {
 													navigate('/about'); close()
-												}}>{t("about")}</a></li>
+												}}>{t("contact")}</a></li>
 											</ul>
 										</nav>
 										{/* Main Menu End*/}
@@ -157,7 +157,7 @@ export default function Navbar() {
 											<li><a href="#" className="twitter"><i className="fab fa-instagram" /></a></li>
 											<li><a href="#" className="linkedin"><i className="fab fa-telegram" /></a></li>
 											<li><a href="#" className="youtube"><i className="fab fa-youtube" /></a></li>
-											<li><a href="#" className="youtube"><i className="fab fa-whatsapp" /></a></li>
+											<li><a href="https://wa.me/998935609055" className="linkedin"><i className="fab fa-whatsapp" /></a></li>
 										</ul>
 									</div>
 									<div className="link call-to">
