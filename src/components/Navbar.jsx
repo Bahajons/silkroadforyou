@@ -154,8 +154,8 @@ export default function Navbar() {
 									<div className="link social">
 										<ul className="social-links clearfix">
 											<li><a href="#" className="facebook"><i className="fab fa-facebook-f" /></a></li>
-											<li><a href="#" className="twitter"><i className="fab fa-instagram" /></a></li>
-											<li><a href="#" className="linkedin"><i className="fab fa-telegram" /></a></li>
+											<li><a href="https://instagram.com/silk_road_for_you?igshid=NTc4MTIwNjQ2YQ==" className="twitter"><i className="fab fa-instagram" /></a></li>
+											<li><a href="http://t.me/+998935609055" className="linkedin"><i className="fab fa-telegram" /></a></li>
 											<li><a href="#" className="youtube"><i className="fab fa-youtube" /></a></li>
 											<li><a href="https://wa.me/998935609055" className="linkedin"><i className="fab fa-whatsapp" /></a></li>
 										</ul>

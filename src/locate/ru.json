@@ -584,16 +584,16 @@
 			]
 		},
 		{
-			"id": "uzb-taj035",
-			"country": "Узбекистан, Таджикистан",
+			"id": "uzb-kyr035",
+			"country": "Узбекистан, Кыргызстан",
 			"name": "Самарканд - Бухара - Хива - Душанбе - Панджикент",
 			"title": "Удивительное путешествие по Самарканду, Бухаре, Хиве, Душанбе",
 			"price": "200",
 			"day": "11",
 			"night": "12",
 			"slug": "uzbekistan-tajikistan-uzb-taj035",
-			"photo_short": "images/uzbekistan/resource/uzb-taj035_480x320.webp",
-			"photo_full": "images/uzbekistan/package_uzb-taj035_1920x720.webp",
+			"photo_short": "images/uzbekistan/resource/uzb-kyr035_480x320.webp",
+			"photo_full": "images/uzbekistan/package_uzb-kyr035_1920x720.webp",
 			"tour_detail": "Отправление в удивительное путешествие по Самарканду, Бухаре, Хиве и Душанбе обещает замечательное знакомство с богатым культурным наследием Центральной Азии. Величие Самарканда с его величественными архитектурными чудесами, такими как площадь Регистан, повергнет вас в благоговейный трепет. Бухара, город с богатой историей, приглашает вас побродить по его древним улочкам и погрузиться в его чарующую атмосферу. Ичан-Кала в Хиве, прекрасно сохранившийся старый город, предлагает заглянуть в прошлое, перенеся вас в прошлое во времени. А в Душанбе, столице Таджикистана, вы откроете для себя сочетание современности и традиций, с его оживленными рынками и интригующими достопримечательностями. Это путешествие обещает стать праздником для чувств, наполненным захватывающими достопримечательностями, культурными встречами и воспоминаниями, которые останутся на всю жизнь",
 			"language": "Английский, русский",
 			"airport": "Международный аэропорт Самарканда",
@@ -673,16 +673,16 @@
 			},
 			"images": [
 				{
-					"200": "images/uzbekistan/resource/uzb-taj034_image1_200x200.webp",
-					"425": "images/uzbekistan/resource/uzb-taj034_image1_425x290.webp"
+					"200": "images/uzbekistan/resource/uzb-kyr035_image1_200x200.webp",
+					"425": "images/uzbekistan/resource/uzb-kyr035_image1_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/uzb-taj034_image2_200x200.webp",
-					"425": "images/uzbekistan/resource/uzb-taj034_image2_425x290.webp"
+					"200": "images/uzbekistan/resource/uzb-kyr035_image2_200x200.webp",
+					"425": "images/uzbekistan/resource/uzb-kyr035_image2_425x290.webp"
 				},
 				{
-					"200": "images/uzbekistan/resource/uzb-taj034_image3_200x200.webp",
-					"425": "images/uzbekistan/resource/uzb-taj034_image3_425x290.webp"
+					"200": "images/uzbekistan/resource/uzb-kyr035_image3_200x200.webp",
+					"425": "images/uzbekistan/resource/uzb-kyr035_image3_425x290.webp"
 				},
 				{
 					"200": "images/uzbekistan/resource/uzb-taj034_image4_200x200.webp",
