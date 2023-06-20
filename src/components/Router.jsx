@@ -5,6 +5,7 @@ import Main from './Main'
 import TravelSingle from './Travel/TravelSingle'
 import About from './About'
 import Footer from './Footer'
+import Blog from './Blog'
 
 export default function Router() {
 
@@ -22,6 +23,13 @@ export default function Router() {
 						<>
 							<Navbar />
 							<TravelSingle />
+							<Footer />
+						</>
+					} />
+					<Route path='/blog' element={
+						<>
+							<Navbar />
+							<Blog />
 							<Footer />
 						</>
 					} />

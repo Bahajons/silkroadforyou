@@ -20,6 +20,7 @@
 	"need_help": "Need Help to Book?",
 	"call_us": "Call us",
 	"map": "Map",
+	"news": "News",
 	"explore_now": "Explore Now",
 	"about_us": "About Us",
 	"read_more": "Read More",
@@ -149,6 +150,24 @@
 	"leave_at": "Leave your data",
 	"updates": "Updates",
 	"from_our_blog": "From Our Blog",
+	"blog_photos": [
+		{
+			"name": "Uzbekistan",
+			"code": "uzb"
+		},
+		{
+			"name": "Kazakhstan",
+			"code": "kaz"
+		},
+		{
+			"name": "Kyrgyzstan",
+			"code": "kyr"
+		},
+		{
+			"name": "Tajikistan",
+			"code": "taj"
+		}
+	],
 	"packages": [
 		{
 			"id": "taj029",

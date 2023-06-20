@@ -120,6 +120,9 @@ export default function Navbar() {
 													</ul>
 												</li> */}
 												<li><a onClick={() => {
+													navigate('/blog'); close()
+												}}>{t("new")}</a></li>
+												<li><a onClick={() => {
 													navigate('/'); close()
 												}}>{t("about")}</a></li>
 												{/* <li className="dropdown"><a href="blog.html">News</a>
@@ -186,37 +189,14 @@ export default function Navbar() {
 								<li><a onClick={() => {
 									navigate('/'); close()
 								}}>{t("home")}</a>
-									{/* <ul>
-										<li><a href="index.html">Home 01</a></li>
-										<li><a href="index-2.html">Home 02</a></li>
-									</ul> */}
 								</li>
-								{/* <li className="dropdown"><a href="tour-list.html">Tours</a>
-									<ul>
-									<li><a href="tour-list.html">Tours List</a></li>
-										<li><a href="tour-packages.html">Tour Packages</a></li>
-										<li><a href="tour-single.html">Tour Details</a></li>
-										<li><a href="activities.html">Activities</a></li>
-										<li><a href="activity-single.html">Activity Details</a></li>
-										</ul>
-									</li> */}
-								{/* <li className="dropdown"><a href="destinations.html">Destination</a>
-									<ul>
-									<li><a href="destinations.html">All Destinations</a></li>
-									<li><a href="destination-single.html">Destination Single</a></li>
-									<li><a href="hotels.html">Hotels</a></li>
-									<li><a href="hotel-single.html">Hotel Details</a></li>
-									</ul>
-								</li> */}
+
+								<li><a onClick={() => {
+									navigate('/blog'); close()
+								}}>{t("news")}</a></li>
 								<li><a onClick={() => {
 									navigate('/about'); close()
 								}}>{t("about")}</a></li>
-								{/* <li className="dropdown"><a href="blog.html">News</a>
-									<ul>
-										<li><a href="blog.html">Our Blog</a></li>
-										<li><a href="blog-single.html">Blog Details</a></li>
-										</ul>
-									</li> */}
 								<li><a onClick={() => {
 									navigate('/about'); close()
 								}}>{t("contact")}</a></li>
@@ -233,10 +213,10 @@ export default function Navbar() {
 							<div className="link social">
 								<ul style={{ fontSize: '22px' }} className="social-links clearfix d-flex justify-content-between">
 									<li><a href="#" className="facebook"><i className="fab fa-facebook-f" /></a></li>
-									<li><a href="#" className="twitter"><i className="fab fa-instagram" /></a></li>
-									<li><a href="#" className="linkedin"><i className="fab fa-telegram" /></a></li>
+									<li><a href="https://instagram.com/silk_road_for_you?igshid=NTc4MTIwNjQ2YQ==" className="twitter"><i className="fab fa-instagram" /></a></li>
+									<li><a href="http://t.me/+998935609055" className="linkedin"><i className="fab fa-telegram" /></a></li>
 									<li><a href="#" className="youtube"><i className="fab fa-youtube" /></a></li>
-									<li><a href="#" className="youtube"><i className="fab fa-whatsapp" /></a></li>
+									<li><a href="https://wa.me/998935609055" className="youtube"><i className="fab fa-whatsapp" /></a></li>
 								</ul>
 							</div>
 						</div>
