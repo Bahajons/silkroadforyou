@@ -156,7 +156,7 @@ export default function Navbar() {
 									</div>
 									<div className="link social">
 										<ul className="social-links clearfix">
-											<li><a href="#" className="facebook"><i className="fab fa-facebook-f" /></a></li>
+											<li><a href="https://www.facebook.com/www.otherpeople.uz?mibextid=LQQJ4d" className="facebook"><i className="fab fa-facebook-f" /></a></li>
 											<li><a href="https://instagram.com/silk_road_for_you?igshid=NTc4MTIwNjQ2YQ==" className="twitter"><i className="fab fa-instagram" /></a></li>
 											<li><a href="http://t.me/+998935609055" className="linkedin"><i className="fab fa-telegram" /></a></li>
 											<li><a href="#" className="youtube"><i className="fab fa-youtube" /></a></li>
@@ -212,7 +212,7 @@ export default function Navbar() {
 							</ul>
 							<div className="link social">
 								<ul style={{ fontSize: '22px' }} className="social-links clearfix d-flex justify-content-between">
-									<li><a href="#" className="facebook"><i className="fab fa-facebook-f" /></a></li>
+									<li><a href="https://www.facebook.com/www.otherpeople.uz?mibextid=LQQJ4d" className="facebook"><i className="fab fa-facebook-f" /></a></li>
 									<li><a href="https://instagram.com/silk_road_for_you?igshid=NTc4MTIwNjQ2YQ==" className="twitter"><i className="fab fa-instagram" /></a></li>
 									<li><a href="http://t.me/+998935609055" className="linkedin"><i className="fab fa-telegram" /></a></li>
 									<li><a href="#" className="youtube"><i className="fab fa-youtube" /></a></li>
