@@ -10,14 +10,12 @@ export default function MainSlider() {
   const { t } = useTranslation();
 
   const style1 = {
-	position:'relative',
-
+    position: "relative",
   };
   const style2 = {
-	position:'absolute',
-	minHeight:'100%',
-	minWidth:'100%'
-
+    position: "absolute",
+    minHeight: "100%",
+    minWidth: "100%",
   };
 
   useEffect(() => {
@@ -60,10 +58,24 @@ export default function MainSlider() {
       <div className="swiper-slide slide-item" key={key}>
         <div
           className="image-layer"
-        //   style={{ backgroundClip: `url(${t(`slider.${item}.img`)})` }}
-		style={style1}
+          style={
+            item != 0
+              ? { backgroundImage: `url(${t(`slider.${item}.img`)})` }
+              : style1
+          }
+          // style={style1}
         />
-		<video src="./images/uzbekistan/slider.mp4" autoPlay={true} style={style2}></video>
+
+        {item == 0 ? (
+          <video
+            src="./images/uzbekistan/slider.mp4"
+            autoPlay
+            muted
+            style={style2}
+          ></video>
+        ) : (
+          ""
+        )}
         <div className="auto-container">
           <div className="content-box">
             <div className="content">
