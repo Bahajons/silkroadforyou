@@ -433,14 +433,14 @@
 				},
 				"6": {
 					"day": "Day 7",
-					"place": "Tashkent-Margilan-Fergana",
-					"description": "Today we enjoy a day tour in Tashkent including the visit to Khast Imam Complex, Chorsu market, the stunning edifice of the Alisher Navoi Opera and Ballet Theatre, local metro with a nice stations, Amir Timur square, the earthquake monument. Transfer to the train station and departure to Fergana by train at 5.20 p.m. Arrival at Margilan ( there is no train station In Fergana ). Transfer to the hotel ( 10-15 minutes - 12 km ). Check in.Asia hotel or similar ( B/-/-)",
+					"place": "Tashkent",
+					"description": "Today we enjoy a day tour in Tashkent including the visit to Khast Imam Complex, Chorsu market, the stunning edifice of the Alisher Navoi Opera and Ballet Theatre, local metro with a nice stations, Amir Timur square, the earthquake monument.",
 					"slug": "bukhara7day"
 				},
 				"7": {
 					"day": "Day 8",
-					"place": "Margilan-Rishtan-Kokand-Tashkent",
-					"description": "Margilan-Rishtan-Kokand-Tashkent.\nVisit to local silk factory, later you’ll have an opportunity to see a famous ceramics of Rishtan and Kokand city on the way to Tashkent",
+					"place": "Tashkent",
+					"description": "Flight to go back.",
 					"slug": "khivanukus8day"
 				}
 			},
