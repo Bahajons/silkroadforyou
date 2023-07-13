@@ -377,7 +377,7 @@
 		{
 			"id": "uzb033",
 			"country": "Uzbekistan",
-			"name": "Samarkand - Bukhara - Khiva",
+			"name": "Samarkand - Bukhara - Khiva - Tashkent",
 			"title": "Amazing journey through Samarkand, Bukhara, Khiva",
 			"price": "750",
 			"day": "8",
@@ -482,7 +482,7 @@
 		{
 			"id": "uzb-taj034",
 			"country": "Uzbekistan, Tajikistan",
-			"name": "Dushabe - Penjikent - Samarkand - Bukhara - Khiva",
+			"name": "Dushabe - Penjikent - Samarkand - Bukhara - Khiva - Tashkent",
 			"title": "Amazing journey through Dushanbe, Panjikent, Samarkand, Bukhara, Khiva",
 			"price": "750",
 			"day": "11",
@@ -562,7 +562,7 @@
 				},
 				"10": {
 					"day": "Day 11",
-					"place": "Flight home",
+					"place": "Tashkent.Flight home",
 					"description": "Flight home",
 					"slug": "khivanukus8day"
 				}
