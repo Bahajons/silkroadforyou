@@ -71,6 +71,7 @@ export default function MainSlider() {
             src="./images/uzbekistan/slider.mp4"
             autoPlay
             muted
+            loop
             style={style2}
           ></video>
         ) : (
