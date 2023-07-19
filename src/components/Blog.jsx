@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { news } from "../locate/news";
-import './blog.css'
+import "./blog.css";
 // import Gallery from 'react-photo-gallery'
 
 export default function Blog() {
@@ -51,7 +51,7 @@ export default function Blog() {
                   {/*Block*/}
 
                   {news.map((item, index) =>
-                    item.country == current ? (
+                    item.country == current && item.name == "" ? (
                       <div
                         className="insta-block h-100"
                         style={{ height: "300px" }}
@@ -84,7 +84,7 @@ export default function Blog() {
                                           src={item.img}
                                         ></video>
                                       ) : (
-                                        <img src={item.img} alt="" />
+                                        <img src={item.img} />
                                       )}
                                     </a>
                                   </div>
@@ -102,9 +102,35 @@ export default function Blog() {
                     ) : (
                       ""
                     )
-										
                   )}
 
+                  {news.map((item, index) =>
+                    item.country == current ? (
+                      <div
+                        className="insta-block h-100"
+                        style={{ height: "300px" }}
+                      >
+                        <div className="image-box">
+                          <a className="w-100 h-100">
+                            {item.name == "video" ? (
+                              <video
+                                style={{
+                                  height: "100%",
+                                  width: "100%",
+                                }}
+                                src={item.img}
+                                controls
+                              ></video>
+                            ) : (
+                              ""
+                            )}
+                          </a>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )
+                  )}
                   {/*Block*/}
                 </div>
               </div>

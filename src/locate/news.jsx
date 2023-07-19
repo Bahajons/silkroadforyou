@@ -96,6 +96,18 @@ export const news = [
     img: "images/uzbekistan/news/kyr5.jpg",
   },
   {
+    id: "151",
+    name: "",
+    country: "kyr",
+    img: "images/uzbekistan/news/kyr6.jpg",
+  },
+  {
+    id: "151",
+    name: "video",
+    country: "kyr",
+    img: "images/uzbekistan/news/kyr8.mp4",
+  },
+  {
     id: "16",
     name: "",
     country: "uzb",
